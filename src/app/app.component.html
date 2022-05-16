@@ -1,6 +1,7 @@
 <h1>{{title}}</h1>
 <!-- create counter -->
+<h3> The Base is: <strong>{{base}}</strong></h3>
 
-<button (click)="acumulator(+1)">+1</button>
+<button (click)="accumulator(base)">+{{base}}</button>
 <span>{{number}}</span>
-<button (click)="acumulator(-1)">-1</button>
+<button (click)="accumulator(-base)">-{{base}}</button>

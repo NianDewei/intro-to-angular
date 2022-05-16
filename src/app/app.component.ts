@@ -7,21 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Dev Angular';
-  number: number = 1;
+  number: number = 5;
+  base: number = 5;
 
-  // // add +1 to counter
-  // add(): void {
-  //   this.number++;
-  // }
-
-  // // subtract -1 to counter
-  // subtract(): void {
-  //   if (this.number > 0) this.number--;
-  // }
-
-  // acumulator counter
-  acumulator(value: number): void {
-    if(this.number == 1 && value == -1) this.number = 1;
-    else this.number += value;
+  accumulator(value: number): void {
+    // this.number += value;
+    // if number is greater than base, reset to base
+    if (this.number >= this.base) this.number += value;
+    else this.number = this.base;
   }
+
+  //recomendation: seperate the logic in two methods
 }
