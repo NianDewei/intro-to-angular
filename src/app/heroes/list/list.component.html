@@ -1,0 +1,19 @@
+<div *ngIf="oldHeroe;else messageHeroe" >
+  <h3>
+    Deleted Hero: <small>{{ oldHeroe }}</small>
+  </h3>
+</div>
+
+<!-- <ng-template #messageHeroe>
+  <h3>You haven't deleted anything</h3>
+</ng-template> -->
+
+<ng-template #messageHeroe>
+  <h3>You haven't deleted anything</h3>
+</ng-template>
+
+<button (click)="deleteHeroe()">Delete an Heroe</button>
+
+<ul>
+  <li *ngFor="let heroe of heroes; let i = index">{{ i + 1 }} - {{ heroe }}</li>
+</ul>
